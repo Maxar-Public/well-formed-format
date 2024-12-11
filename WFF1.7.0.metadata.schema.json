@@ -1,74 +1,8 @@
 {
-  "name": "WFF 1.6 Metadata Schema",
+  "name": "WFF 1.7.0 Metadata Schema",
   "classes": {
     "tile": {
       "properties": {
-        "mpa_adjustment_params": {
-          "name": "Possible adjustment to mpa_position",
-          "type": "VEC3",
-          "componentType": "FLOAT64",
-          "componentCount": 3,
-          "default": [0, 0, 0],
-          "optional": true,
-          "semantic": "MPA_ADJUSTMENT_PARAMS"
-        },
-        "mpa_adjustment_params_array": {
-          "name": "A possible adjustment to each element in mpa_position_array",
-          "type": "VEC3",
-          "componentType": "FLOAT64",
-          "componentCount": 3,
-          "array": true,
-          "default": [],
-          "optional": true,
-          "semantic": "MPA_ADJUSTMENT_PARAMS_ARRAY"
-        },
-        "mpa_covariance_matrix": {
-          "name": "The predicted accuracy of the surface at the point described by mpa_position",
-          "type": "MAT3",
-          "componentType": "FLOAT64",
-          "componentCount": 9,
-          "optional": true,
-          "semantic": "MPA_COVARIANCE_MATRIX"
-        },
-        "mpa_covariance_matrix_array": {
-          "name": "The predicted accuracy of the surface at the points described by mpa_position_array",
-          "type": "MAT3",
-          "componentType": "FLOAT64",
-          "componentCount": 9,
-          "array": true,
-          "optional": true,
-          "semantic": "MPA_COVARIANCE_MATRIX"
-        },
-        "mpa_id": {
-          "name": "A unique identifier for the provided gpm triplet of data",
-          "type": "STRING",
-          "optional": true,
-          "semantic": "ID"
-        },
-        "mpa_id_array": {
-          "name": "An array of unique identifier for each of the provided triplets of data, i.e. mpa_adjustment_parameters_array, mpa_covariance_matrix_array and mpa_position_array",
-          "type": "STRING",
-          "array": true,
-          "optional": true,
-          "semantic": "ID"
-        },
-        "mpa_position": {
-          "name": "The position of the anchor point",
-          "type": "VEC3",
-          "componentType": "FLOAT64",
-          "componentCount": 3,
-          "optional": true,
-          "semantic": "MPA_POSITION"
-        },
-        "mpa_position_array": {
-          "name": "The position of the anchor point",
-          "type": "VEC3",
-          "componentType": "FLOAT64",
-          "componentCount": 3,
-          "array": true,
-          "optional": true,
-          "semantic": "MPA_POSITION"
-        },
         "max_height": {
           "name": "Maximum Tile Height",
           "type": "SCALAR"
@@ -141,29 +75,6 @@
           "name": "Geometry Model",
           "type": "STRING",
           "default": "SURFACE",
-          "optional": true
-        },
-        "mpa_interp_params": {
-          "name": "GPM Interpolation parameters",
-          "type": "SCALAR",
-          "componentType": "FLOAT64",
-          "array": true,
-          "count": 2,
-          "optional": true,
-          "semantic": "MPA_INTERP_PARAMS"
-        },
-        "mpa_spdcf_params": {
-          "name": "GPM SPDCF function parameters",
-          "type": "SCALAR",
-          "componentType": "FLOAT64",
-          "array": true,
-          "count": 4,
-          "optional": true,
-          "semantic": "MPA_SPDCF_PARAMS"
-        },
-        "mpa_version": {
-          "name": "GPM version",
-          "type": "STRING",
           "optional": true
         },
         "id": {
