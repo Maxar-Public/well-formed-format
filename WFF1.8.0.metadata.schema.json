@@ -1,29 +1,104 @@
 {
-  "name": "WFF 1.7.0 Metadata Schema",
+  "name": "WFF 1.8.0 Metadata Schema",
   "classes": {
     "tile": {
       "properties": {
+        "acq_im_cnt": {
+          "type": "SCALAR",
+          "componentType": "UINT32",
+          "name": "Number of images used to create the tile",
+          "optional": true,
+          "semantic": "MAXAR_ACQUISITION_IMAGE_COUNT"
+        },
+        "acq_first_date": {
+          "type": "STRING",
+          "name": "First date if images used to create the tile",
+          "optional": true,
+          "semantic": "MAXAR_ACQUISITION_FIRST_DATE"
+        },
+        "acq_last_date": {
+          "type": "STRING",
+          "name": "Last date of images used to create the tile",
+          "optional": true,
+          "semantic": "MAXAR_ACQUISITION_LAST_DATE"
+        },
+        "acq_avg_date": {
+          "type": "STRING",
+          "name": "Average date of all images used to create the tile",
+          "optional": true,
+          "semantic": "MAXAR_ACQUISITION_AVERAGE_DATE"
+        },
+        "acq_geom_im_cnt": {
+          "type": "SCALAR",
+          "componentType": "UINT32",
+          "name": "Number of images used to create the geometry",
+          "optional": true,
+          "semantic": "MAXAR_ACQUISITION_GEOMETRY_IMAGE_COUNT"
+        },
+        "acq_geom_first_date": {
+          "type": "STRING",
+          "name": "First date of images used for the geometry",
+          "optional": true,
+          "semantic": "MAXAR_ACQUISITION_GEOMETRY_FIRST_DATE"
+        },
+        "acq_geom_last_date": {
+          "type": "STRING",
+          "name": "Last date of images used for the geometry",
+          "optional": true,
+          "semantic": "MAXAR_ACQUISITION_GEOMETRY_LAST_DATE"
+        },
+        "acq_geom_avg_date": {
+          "type": "STRING",
+          "name": "Average date of images used for the geometry",
+          "optional": true,
+          "semantic": "MAXAR_ACQUISITION_GEOMETRY_AVERAGE_DATE"
+        },
+        "acq_tex_im_cnt": {
+          "type": "SCALAR",
+          "componentType": "UINT32",
+          "name": "Number of images used to create the texture",
+          "optional": true,
+          "semantic": "MAXAR_ACQUISITION_TEXTURE_IMAGE_COUNT"
+        },
+        "acq_tex_first_date": {
+          "type": "STRING",
+          "name": "First date of images used for the texture",
+          "optional": true,
+          "semantic": "MAXAR_ACQUISITION_TEXTURE_FIRST_DATE"
+        },
+        "acq_tex_last_date": {
+          "type": "STRING",
+          "name": "Last date of images used for the texture",
+          "optional": true,
+          "semantic": "MAXAR_ACQUISITION_TEXTURE_LAST_DATE"
+        },
+        "acq_tex_avg_date": {
+          "type": "STRING",
+          "name": "Average date of images used for the texture",
+          "optional": true,
+          "semantic": "MAXAR_ACQUISITION_TEXTURE_AVERAGE_DATE"
+        },
         "max_height": {
           "name": "Maximum Tile Height",
-          "type": "SCALAR"
+          "type": "SCALAR",
           "componentType": "FLOAT32",
           "optional": true,
           "semantic": "TILE_MAXIMUM_HEIGHT"
         },
         "min_height": {
           "name": "Minimum Tile Height",
-          "type": "SCALAR"
+          "type": "SCALAR",
           "componentType": "FLOAT32",
           "optional": true,
           "semantic": "TILE_MINIMUM_HEIGHT"
         },
         "texture_resolution": {
           "name": "Estimated Texture Resolution",
-          "type": "SCALAR"
+          "type": "SCALAR",
           "componentType": "FLOAT32",
           "optional": true,
           "semantic": "MAXAR_TEXTURE_RESOLUTION"
-        },
+        }
       }
     },
     "tileset": {
@@ -31,72 +106,100 @@
         "capture_platform": {
           "name": "Capture Platform",
           "type": "STRING",
-          "optional": true
+          "default": "UNKNOWN",
+          "optional": true,
+          "semantic": "MAXAR_CAPTURE_PLATFORM"
         },
         "capture_sensor": {
           "name": "Capture Sensor",
           "type": "STRING",
-          "optional": true
+          "default": "UNKNOWN",
+          "optional": true,
+          "semantic": "MAXAR_CAPTURE_SENSOR"
         },
         "content_type": {
           "name": "Content Type",
           "type": "STRING",
           "default": "MESH",
-          "optional": true
+          "optional": true,
+          "semantic": "MAXAR_CONTENT_TYPE"
         },
         "controlled_by": {
           "name": "Controlling DoD office",
           "type": "STRING",
-          "optional": true
+          "optional": true,
+          "semantic": "WFF_DISTRIBUTION_CONTROLLED_BY"
         },
         "created": {
           "name": "Created date",
           "type": "STRING",
-          "optional": true
+          "optional": true,
+          "semantic": "MAXAR_CREATION_DATE"
         },
         "distribution": {
           "name": "Distribution",
           "type": "STRING",
           "default": "UNDECLARED",
-          "optional": true
+          "optional": true,
+          "semantic": "WFF_DISTRIBUTION_CATEGORY"
         },
         "distribution_date": {
           "name": "The date of production",
           "type": "STRING",
-          "optional": true
+          "optional": true,
+          "semantic": "WFF_DISTRIBUTION_DATE"
         },
         "distribution_statement": {
           "name": "Distribution Statement",
           "type": "STRING",
           "default": "Undeclared",
-          "optional": true
+          "optional": true,
+          "semantic": "WFF_DISTRIBUTION_STATEMENT"
+        },
+        "export_id": {
+          "name": "Export id",
+          "type": "STRING",
+          "optional": true,
+          "semantic": "MAXAR_EXPORT_ID"
         },
         "geometry_model": {
           "name": "Geometry Model",
           "type": "STRING",
           "default": "SURFACE",
-          "optional": true
+          "optional": true,
+          "semantic": "MAXAR_GEOMETRY_MODEL"
         },
         "id": {
-          "name": "Privider Specific dataset ID",
+          "name": "Provider Specific dataset ID",
           "type": "STRING",
-          "optional": true
+          "optional": true,
+          "semantic": "ID"
         },
         "licenses": {
           "name": "Licenses",
           "type": "STRING",
           "array": true,
-          "optional": false
+          "optional": true,
+          "semantic": "MAXAR_LICENSES"
+        },
+        "materials_variants": {
+          "name": "Materials variants names",
+          "type": "STRING",
+          "array": true,
+          "optional": true,
+          "semantic": "TILESET_MATERIALS_VARIANTS_NAMES"
         },
         "max_leaf_texture_resolution": {
           "name": "Max Leaf Texture Resolution",
-          "type": "FLOAT64",
+          "type": "SCALAR",
+          "componentType": "FLOAT64",
           "optional": true,
           "semantic": "MAXAR_MAX_LEAF_TEXTURE_RESOLUTION"
         },
         "min_leaf_texture_resolution": {
           "name": "Min Leaf Texture Resolution",
-          "type": "FLOAT64",
+          "type": "SCALAR",
+          "componentType": "FLOAT64",
           "optional": true,
           "semantic": "MAXAR_MIN_LEAF_TEXTURE_RESOLUTION"
         },
@@ -108,18 +211,21 @@
         },
         "ortho_texture_features": {
           "type": "STRING",
-          "array": true
-          "optional": true
+          "array": true,
+          "optional": true,
+          "semantic": "MAXAR_ORTHO_TEXTURE_FEATURES"
         },
         "point_of_contact": {
           "name": "Point-of-contact",
           "type": "STRING",
-          "optional": true
+          "optional": true,
+          "semantic": "WFF_POINT_OF_CONTACT"
         },
         "provider": {
           "name": "Provider identifier",
           "type": "STRING",
-          "optional": true
+          "optional": true,
+          "semantic": "WFF_PROVIDER"
         },
         "reference_epoch": {
           "name": "Reference Epoch",
@@ -139,10 +245,11 @@
           "name": "Runtime enabled dataset",
           "type": "BOOLEAN",
           "default": false,
-          "optional": true
+          "optional": true,
+          "semantic": "MAXAR_RUNTIME_ENABLED"
         },
         "schema": {
-          "name": "WFF Schema identifier",
+          "name": "Schema identifier",
           "type": "STRING",
           "optional": true
         },
@@ -150,23 +257,27 @@
           "name": "Security level",
           "type": "STRING",
           "default": "UNDECLARED",
-          "optional": true
+          "optional": true,
+          "semantic": "WFF_DISTRIBUTION_SECURITY"
         },
         "source_ids": {
           "name": "Source ID's",
           "type": "STRING",
           "array": true,
-          "optional": true
+          "optional": true,
+          "semantic": "MAXAR_SOURCE_IDS"
         },
         "texture_features": {
           "type": "STRING",
           "array": true,
-          "optional": true
+          "optional": true,
+          "semantic": "MAXAR_TEXTURE_FEATURES"
         },
         "wff_version": {
           "name": "WFF version",
           "type": "STRING",
-          "optional": false
+          "optional": false,
+          "semantic": "WFF_VERSION"
         }
       }
     }
