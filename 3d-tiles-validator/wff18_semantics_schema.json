@@ -1,0 +1,196 @@
+{
+  "id": "WFF-Semantics-1.8.0",
+  "description": "A metadata schema where each class property has a name that represents one possible semantic of a metadata property, and that is used for validating semantics in a given tileset JSON file, by passing it in as one of the 'semanticSchemaFileNames' of the validation options",
+  "classes": {
+    "WffTilesetSemantics": {
+      "description": "A class where each property is a semantic for tileset metadata defined by Well-Formed Format or Maxar",
+      "properties": {
+        "MAXAR_CAPTURE_PLATFORM": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_CAPTURE_SENSOR": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_COLLECTION_ID": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_CONTENT_TYPE": {
+          "type": "STRING",
+          "optional": true
+        },
+        "WFF_DISTRIBUTION_CONTROLLED_BY": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_CREATION_DATE": {
+          "type": "STRING",
+          "optional": true
+        },
+        "WFF_DISTRIBUTION_CATEGORY": {
+          "type": "STRING",
+          "optional": true
+        },
+        "WFF_DISTRIBUTION_DATE": {
+          "type": "STRING",
+          "optional": true
+        },
+        "WFF_DISTRIBUTION_STATEMENT": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_EXPORT_ID": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_GEOMETRY_MODEL": {
+          "type": "STRING",
+          "optional": true
+        },
+        "ID": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_LICENSES": {
+          "type": "STRING",
+          "array": true,
+          "optional": true
+        },
+        "TILESET_MATERIALS_VARIANTS_NAMES": {
+          "type": "STRING",
+          "array": true,
+          "optional": true
+        },
+        "MAXAR_MAX_LEAF_TEXTURE_RESOLUTION": {
+          "type": "SCALAR",
+          "componentType": "FLOAT64",
+          "optional": true
+        },
+        "MAXAR_MIN_LEAF_TEXTURE_RESOLUTION": {
+          "type": "SCALAR",
+          "componentType": "FLOAT64",
+          "optional": true
+        },
+        "NAME": {
+          "type": "STRING"
+        },
+        "MAXAR_ORTHO_TEXTURE_FEATURES": {
+          "type": "STRING",
+          "array": true,
+          "optional": true
+        },
+        "WFF_POINT_OF_CONTACT": {
+          "type": "STRING",
+          "optional": true
+        },
+        "WFF_PROVIDER": {
+          "type": "STRING",
+          "optional": true
+        },
+        "TILESET_CRS_COORDINATE_EPOCH": {
+          "type": "STRING",
+          "optional": true
+        },
+        "TILESET_CRS_GEOCENTRIC": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_RUNTIME_ENABLED": {
+          "type": "BOOLEAN",
+          "optional": true
+        },
+        "WFF_DISTRIBUTION_SECURITY": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_SOURCE_IDS": {
+          "type": "STRING",
+          "array": true,
+          "optional": true
+        },
+        "MAXAR_TEXTURE_FEATURES": {
+          "type": "STRING",
+          "array": true,
+          "optional": true
+        },
+        "WFF_VERSION": {
+          "type": "STRING",
+          "optional": false
+        }
+      }
+    },
+    "WffTileSemantics": {
+      "description": "A class where each property is a semantic for tile metadata defined by Well-Formed Format or Maxar",
+      "properties": {
+        "MAXAR_ACQUISITION_IMAGE_COUNT": {
+          "type": "SCALAR",
+          "componentType": "UINT32",
+          "optional": true
+        },
+        "MAXAR_ACQUISITION_FIRST_DATE": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_ACQUISITION_LAST_DATE": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_ACQUISITION_AVERAGE_DATE": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_ACQUISITION_GEOMETRY_IMAGE_COUNT": {
+          "type": "SCALAR",
+          "componentType": "UINT32",
+          "optional": true
+        },
+        "MAXAR_ACQUISITION_GEOMETRY_FIRST_DATE": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_ACQUISITION_GEOMETRY_LAST_DATE": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_ACQUISITION_GEOMETRY_AVERAGE_DATE": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_ACQUISITION_TEXTURE_IMAGE_COUNT": {
+          "type": "SCALAR",
+          "componentType": "UINT32",
+          "optional": true
+        },
+        "MAXAR_ACQUISITION_TEXTURE_FIRST_DATE": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_ACQUISITION_TEXTURE_LAST_DATE": {
+          "type": "STRING",
+          "optional": true
+        },
+        "MAXAR_ACQUISITION_TEXTURE_AVERAGE_DATE": {
+          "type": "STRING",
+          "optional": true
+        },
+        "TILE_MAXIMUM_HEIGHT": {
+          "type": "SCALAR",
+          "componentType": "FLOAT32",
+          "optional": true
+        },
+        "TILE_MINIMUM_HEIGHT": {
+          "type": "SCALAR",
+          "componentType": "FLOAT32",
+          "optional": true
+        },
+        "MAXAR_TEXTURE_RESOLUTION": {
+          "type": "SCALAR",
+          "componentType": "FLOAT32",
+          "optional": true
+        }
+      }
+    }
+  }
+}
