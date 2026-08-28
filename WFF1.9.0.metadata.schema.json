@@ -1,5 +1,5 @@
 {
-  "name": "WFF 1.8.0 Metadata Schema",
+  "name": "WFF 1.9.0 Metadata Schema",
   "classes": {
     "tile": {
       "properties": {
@@ -12,7 +12,7 @@
         },
         "acq_first_date": {
           "type": "STRING",
-          "name": "First date if images used to create the tile",
+          "name": "First date of images used to create the tile",
           "optional": true,
           "semantic": "MAXAR_ACQUISITION_FIRST_DATE"
         },
@@ -117,6 +117,12 @@
           "optional": true,
           "semantic": "MAXAR_CAPTURE_SENSOR"
         },
+        "collection_id": {
+          "name": "Collection ID",
+          "type": "STRING",
+          "optional": true,
+          "semantic": "MAXAR_COLLECTION_ID"
+        },
         "content_type": {
           "name": "Content Type",
           "type": "STRING",
@@ -152,7 +158,7 @@
         "distribution_statement": {
           "name": "Distribution Statement",
           "type": "STRING",
-          "default": "Undeclared",
+          "default": "UNDECLARED",
           "optional": true,
           "semantic": "WFF_DISTRIBUTION_STATEMENT"
         },
@@ -208,6 +214,13 @@
           "type": "STRING",
           "required": false,
           "semantic": "NAME"
+        },
+        "nonvisual_geometry_types": {
+          "name": "Nonvisual Geometry Types",
+          "type": "STRING",
+          "array": true,
+          "optional": true,
+          "semantic": "MAXAR_NONVISUAL_GEOMETRY_TYPES"
         },
         "ortho_texture_features": {
           "type": "STRING",

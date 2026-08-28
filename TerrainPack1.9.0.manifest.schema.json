@@ -3,7 +3,7 @@
   "$id": "manifest.schema.json",
   "title": "Manifest",
   "type": "object",
-  "description": "The Terrain Pack manifest lists what files belongs, and provides SHA-256 checksums for each file.",
+  "description": "The Terrain Pack manifest lists what files belong, and provides SHA-256 checksums for each file.",
   "definitions": {
     "file": {
       "type": "object",
